@@ -64,7 +64,7 @@ class _NumberPaginatorState extends State<NumberPaginator> {
             PaginatorButton(
               onPressed: _currentPage > 0 ? _prev : null,
               child: const Text(
-                '??????',
+                'السابق',
                 style: TextStyle(fontSize: 13),
               ),
             ),
@@ -72,7 +72,7 @@ class _NumberPaginatorState extends State<NumberPaginator> {
             PaginatorButton(
               onPressed: _currentPage < widget.numberPages - 1 ? _next : null,
               child: const Text(
-                '??????',
+                'التالي',
                 style: TextStyle(fontSize: 12),
               ),
             ),
