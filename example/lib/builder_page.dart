@@ -31,6 +31,8 @@ class _BuilderPageState extends State<BuilderPage> {
         margin: EdgeInsets.zero,
         elevation: 4,
         child: NumberPaginator(
+          leftIcon: const Text(''),
+          rightIcon: const Text(''),
           numberPages: _numPages,
           contentBuilder: (index) => Expanded(
             child: Center(

@@ -26,6 +26,9 @@ class NumberPaginator extends StatefulWidget {
   /// [config] is ignored.
   final NumberPaginatorContentBuilder? contentBuilder;
 
+  final Widget leftIcon;
+  final Widget rightIcon;
+
   /// Creates an instance of [NumberPaginator].
   const NumberPaginator({
     Key? key,
@@ -34,6 +37,8 @@ class NumberPaginator extends StatefulWidget {
     this.onPageChange,
     this.config = const NumberPaginatorUIConfig(),
     this.contentBuilder,
+    required this.leftIcon,
+    required this.rightIcon,
   }) : super(key: key);
 
   @override
@@ -63,18 +68,12 @@ class _NumberPaginatorState extends State<NumberPaginator> {
           children: [
             PaginatorButton(
               onPressed: _currentPage > 0 ? _prev : null,
-              child: const Text(
-                'السابق',
-                style: TextStyle(fontSize: 13),
-              ),
+              child: widget.rightIcon,
             ),
             ..._buildCenterContent(),
             PaginatorButton(
               onPressed: _currentPage < widget.numberPages - 1 ? _next : null,
-              child: const Text(
-                'التالي',
-                style: TextStyle(fontSize: 12),
-              ),
+              child: widget.leftIcon,
             ),
           ],
         ),

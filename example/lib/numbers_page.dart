@@ -31,6 +31,8 @@ class _NumbersPageState extends State<NumbersPage> {
         margin: EdgeInsets.zero,
         elevation: 4,
         child: NumberPaginator(
+          leftIcon: const Text(''),
+          rightIcon: const Text(''),
           // by default, the paginator shows numbers as center content
           numberPages: _numPages,
           onPageChange: (int index) {

@@ -31,6 +31,8 @@ class _DropdownPageState extends State<DropdownPage> {
           margin: EdgeInsets.zero,
           elevation: 4,
           child: NumberPaginator(
+            leftIcon: const Text(''),
+            rightIcon: const Text(''),
             numberPages: _numPages,
             // shows a dropdown as the center paginator content
             config: const NumberPaginatorUIConfig(

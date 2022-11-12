@@ -31,6 +31,8 @@ class _OnlyArrowsPageState extends State<OnlyArrowsPage> {
         margin: EdgeInsets.zero,
         elevation: 4,
         child: NumberPaginator(
+          leftIcon: const Text(''),
+          rightIcon: const Text(''),
           numberPages: _numPages,
           // shows only default arrows, no center content of paginator
           config:
